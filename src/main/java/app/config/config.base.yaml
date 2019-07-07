@@ -1,0 +1,5 @@
+# 阿里云相关配置信息
+ALIYUN:
+  REGION_ID: cn-shanghai
+  AK_ID: @ALIYUN@AK_ID # 约定敏感信息配置写到.env中读取配置
+  AK_SECRET: @ALIYUN@AK_SECRET
