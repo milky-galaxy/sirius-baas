@@ -1,8 +1,7 @@
-package app;
+package com.sirius.baas;
 
-import app.base.ERR;
-import app.base.$;
-import app.services.aliyun.ECI;
+import com.sirius.baas.base.ERR;
+import com.sirius.baas.base.$;
 import com.alibaba.fastjson.*;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
@@ -170,8 +169,9 @@ public class Main {
             BufferedReader streamReader = new BufferedReader(new InputStreamReader(t.getRequestBody(), "UTF-8"));
             StringBuilder responseStrBuilder = new StringBuilder();
             String inputStr;
-            while ((inputStr = streamReader.readLine()) != null)
+            while ((inputStr = streamReader.readLine()) != null) {
                 responseStrBuilder.append(inputStr);
+            }
             JSONObject in;
             // TODO 不应该忽略参数解析错误
             if (t.getRequestHeaders().get("Content-type").get(0).toLowerCase().startsWith("application/x-www-form-urlencoded")) {

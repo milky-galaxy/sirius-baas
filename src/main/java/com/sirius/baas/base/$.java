@@ -1,4 +1,4 @@
-package app.base;
+package com.sirius.baas.base;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
@@ -6,12 +6,10 @@ import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.JSONPath;
 import org.yaml.snakeyaml.Yaml;
 
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.InputStream;
 import java.util.Map;
 
-import app.Main;
+import com.sirius.baas.Main;
 
 public final class $ {
     // 当前应用运行环境的全局配置参数（local,daily,pre,prod,...）
@@ -47,14 +45,15 @@ public final class $ {
         try {
             // java JSONObject进行merge操作实现配置项目的合并处理算法实现
             if (__CONFIG__ == null) {
-                InputStream stream = Main.class.getResourceAsStream("/app/config/config.base.yaml");
+                InputStream stream = Main.class.getResourceAsStream("/com/sirius/baas/config/config.base.yaml");
                 Yaml yaml2 = new Yaml();
                 Map<String, Object> tmp2 = yaml2.load(stream);
 //                System.out.println(tmp2);
 //                System.out.println("asdf");
                 // 首次初始化全局配置数据信息
-                InputStream baseConfigPath = Main.class.getResourceAsStream("/app/config/config.base.yaml");
-                InputStream targetConfigPath = Main.class.getResourceAsStream("/app/config/config." + __ENV__ + ".yaml");
+                InputStream baseConfigPath = Main.class.getResourceAsStream("/com/sirius/baas/config/config.base.yaml");
+                InputStream targetConfigPath = Main.class.getResourceAsStream(
+                    "/com/sirius/baas/config/config." + __ENV__ + ".yaml");
                 JSONObject base;
                 JSONObject target;
                 Yaml yaml = new Yaml();

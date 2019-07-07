@@ -1,4 +1,4 @@
-package app.base;
+package com.sirius.baas.base;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;

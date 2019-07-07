@@ -1,11 +1,6 @@
-package app.entries.web.eci;
+package com.sirius.baas.entries.web.eci;
 
-import app.base.*;
-import app.modules.*;
-import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.aliyuncs.eci.model.v20180808.CreateContainerGroupResponse;
-import com.aliyuncs.http.HttpResponse;
 
 public class Apply {
     /**
