@@ -1,0 +1,20 @@
+ROSTemplateFormatVersion: '2015-09-01'
+Transform: 'Aliyun::Serverless-2018-04-03'
+Resources:
+  sirius:
+    Type: 'Aliyun::Serverless::Service'
+    Properties:
+      Description: 'sirius services'
+    baas:
+      Type: 'Aliyun::Serverless::Function'
+      Properties:
+        Handler: com.sirius.baas.Main::handleRequest
+        Initializer: com.sirius.baas.Main::initialize
+        Runtime: java8
+        CodeUri: './'
+      Events:
+        baas-http:
+          Type: HTTP
+          Properties:
+            AuthType: ANONYMOUS
+            Methods: ['POST']
