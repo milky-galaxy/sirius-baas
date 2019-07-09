@@ -1,4 +1,4 @@
-package com.sirius.baas.base;
+package com.sirius.baas.service.common;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
