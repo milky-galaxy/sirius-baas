@@ -44,7 +44,7 @@ public class ErrUtil {
         }
         JSONObject out = new JSONObject();
         out.put("success", false);
-        out.put("content", e.getMessage());
+        out.put("content", e.toString());
         out.put("errCode", Err.UNKNOWN);
         out.put("errMsg", Err.UNKNOWN.getMsg());
         out.put("errLevel", "error");

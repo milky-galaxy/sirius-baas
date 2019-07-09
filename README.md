@@ -9,7 +9,7 @@ mvn package && fun local invoke sirius/baas
 ## 部署
 
 ```bash
-mvn package && fun deploy
+mvn clean package && fun deploy
 ```
 
 ## 执行
