@@ -3,8 +3,11 @@ package com.sirius.baas.service.common;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.aliyun.fc.runtime.Context;
+import com.sirius.baas.base.ApiRequest;
+import com.sirius.baas.base.ApiResponse;
 import com.sirius.baas.util.ConfUtil;
 import com.sirius.baas.util.ErrUtil;
+import sun.reflect.generics.reflectiveObjects.ParameterizedTypeImpl;
 
 import java.io.*;
 import java.lang.reflect.InvocationTargetException;
@@ -44,21 +47,28 @@ public class Router {
     }
 
     private JSONObject call(String api, JSONObject param) throws Throwable {
+        setupConf(param);
         // 根据API路径找到实现类 path/to/Clazz => com.sirius.baas.api.path.to.Clazz
         Class<?> clazz = Class.forName("com.sirius.baas.api" + api.replace('/', '.'));
-        Method method = clazz.getMethod("call", JSONObject.class);
+        ParameterizedTypeImpl reqType = (ParameterizedTypeImpl)clazz.getAnnotatedInterfaces()[0].getType();
+        Class reqClazz = Class.forName(reqType.getActualTypeArguments()[0].getTypeName());
+        Method method = clazz.getMethod("call", reqClazz);
+        ApiRequest req = (ApiRequest)reqClazz.newInstance();
+        ApiResponse content = (ApiResponse) method.invoke(clazz.newInstance(), req.fromJson(param));
+        JSONObject out = new JSONObject();
+        // 避免前端空对象处理
+        out.put("content", content != null ? content.toJson() : new JSONObject());
+        out.put("success", true);
+        return out;
+    }
+
+    private void setupConf(JSONObject param) {
         // 校验形参中的环境变量输入正确合法性（在接口中定义__env__参数进行约定传递环境参数）
         // 默认的环境参数配置为local本地调试使用
         ConfUtil.ENV = param.get(ConfUtil.PARAM_ENV) != null ? param.get(ConfUtil.PARAM_ENV).toString() : "local";
         // 清空上次请求对应的全局环境变量值（模拟PHP的单线程处理框架将全局变量等同于请求上下文信息）
         ConfUtil.CONFIG = null;
         // 路由调用实现以及输出结果响应输出
-        JSONObject content = (JSONObject) method.invoke(clazz.newInstance(), param);
-        JSONObject out = new JSONObject();
-        // 避免前端空对象处理
-        out.put("content", content != null ? content : new JSONObject());
-        out.put("success", true);
-        return out;
     }
 
     private String streamToString(InputStream inputStream) throws IOException {
