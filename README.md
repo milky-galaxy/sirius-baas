@@ -11,6 +11,9 @@ fun config
 
 ```bash
 mvn package && fun local invoke sirius/baas --event /path/to/event-data-file
+fun local invoke sirius/baas --event ./event.dat
+
+
 ```
 
 ## 本地调试
