@@ -1,6 +1,6 @@
-package com.sirius.baas.entity.dns;
+package app.entity.dns;
 
-import com.sirius.baas.entity.AliyunReq;
+import app.entity.AliyunReq;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

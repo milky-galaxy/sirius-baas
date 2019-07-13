@@ -1,12 +1,12 @@
-package com.sirius.baas.api.dns;
+package app.api.dns;
 
 import com.aliyuncs.IAcsClient;
 import com.aliyuncs.alidns.model.v20150109.AddDomainRequest;
 import com.aliyuncs.http.HttpResponse;
-import com.sirius.baas.base.Api;
-import com.sirius.baas.entity.AliyunRes;
-import com.sirius.baas.entity.dns.AddDomainReq;
-import com.sirius.baas.util.AliyunUtil;
+import app.base.Api;
+import app.entity.AliyunRes;
+import app.entity.dns.AddDomainReq;
+import app.util.AliyunUtil;
 
 public class AddDomain implements Api<AddDomainReq, AliyunRes> {
 

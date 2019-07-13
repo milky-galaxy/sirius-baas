@@ -1,10 +1,10 @@
-package com.sirius.baas.util;
+package app.util;
 
 import com.aliyuncs.DefaultAcsClient;
 import com.aliyuncs.IAcsClient;
 import com.aliyuncs.profile.DefaultProfile;
 import com.aliyuncs.profile.IClientProfile;
-import com.sirius.baas.entity.AliyunReq;
+import app.entity.AliyunReq;
 
 public class AliyunUtil {
 

@@ -8,8 +8,8 @@ Resources:
     baas:
       Type: 'Aliyun::Serverless::Function'
       Properties:
-        Handler: com.sirius.baas.Main::handleRequest
-        Initializer: com.sirius.baas.Main::initialize
+        Handler: Main::handleRequest
+        Initializer: Main::initialize
         Runtime: java8
         CodeUri: './'
       Events:

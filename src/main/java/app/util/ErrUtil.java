@@ -1,9 +1,9 @@
-package com.sirius.baas.util;
+package app.util;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import com.sirius.baas.base.Err;
+import app.base.Err;
 
 public class ErrUtil {
 

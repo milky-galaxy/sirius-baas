@@ -1,10 +1,10 @@
-package com.sirius.baas;
+package app;
 
+import app.service.common.Router;
 import com.aliyun.fc.runtime.Context;
 import com.aliyun.fc.runtime.FunctionComputeLogger;
 import com.aliyun.fc.runtime.FunctionInitializer;
 import com.aliyun.fc.runtime.StreamRequestHandler;
-import com.sirius.baas.service.common.Router;
 
 import java.io.IOException;
 import java.io.InputStream;

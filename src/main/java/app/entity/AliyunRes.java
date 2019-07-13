@@ -1,8 +1,8 @@
-package com.sirius.baas.entity;
+package app.entity;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.sirius.baas.base.ApiResponse;
+import app.base.ApiResponse;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

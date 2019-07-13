@@ -1,4 +1,4 @@
-package com.sirius.baas.base;
+package app.base;
 
 public interface Api<Req extends ApiRequest, Res extends ApiResponse> {
 

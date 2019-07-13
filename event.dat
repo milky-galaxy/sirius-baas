@@ -1,6 +1,8 @@
 {
     "api": "/dns/AddDomain",
     "param": {
+        "accessKey": "1",
+        "accessSecret": "2",
         "domainName": "xxx.com",
         "targetName": "yyy.com"
     }

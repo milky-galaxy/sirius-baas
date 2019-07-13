@@ -1,20 +1,20 @@
-package com.sirius.baas.util;
+package app.util;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.JSONPath;
-import com.sirius.baas.base.Err;
+import app.base.Err;
 import org.yaml.snakeyaml.Yaml;
 
 import java.io.InputStream;
 import java.util.Map;
 
-import com.sirius.baas.Main;
+import app.Main;
 
 public final class ConfUtil {
 
-    private static final String CONF_FOLDER = "/com/sirius/baas/config/";
+    private static final String CONF_FOLDER = "/app/config/";
     public static final String PARAM_ENV = "__env__";
 
     /**

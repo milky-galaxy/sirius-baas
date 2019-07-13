@@ -1,12 +1,12 @@
-package com.sirius.baas.service.common;
+package app.service.common;
 
+import app.util.ConfUtil;
+import app.util.ErrUtil;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.aliyun.fc.runtime.Context;
-import com.sirius.baas.base.ApiRequest;
-import com.sirius.baas.base.ApiResponse;
-import com.sirius.baas.util.ConfUtil;
-import com.sirius.baas.util.ErrUtil;
+import app.base.ApiRequest;
+import app.base.ApiResponse;
 import sun.reflect.generics.reflectiveObjects.ParameterizedTypeImpl;
 
 import java.io.*;
