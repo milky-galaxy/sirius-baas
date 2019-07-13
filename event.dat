@@ -1,0 +1,7 @@
+{
+    "api": "/dns/AddDomain",
+    "param": {
+        "domainName": "xxx.com",
+        "targetName": "yyy.com"
+    }
+}

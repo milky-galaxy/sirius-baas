@@ -12,4 +12,7 @@ public class AddDomainReq extends AliyunReq {
 
     private String domainName;
 
+    public String getDomainName() {
+        return domainName;
+    }
 }

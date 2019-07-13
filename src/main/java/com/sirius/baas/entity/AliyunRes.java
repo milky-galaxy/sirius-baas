@@ -14,6 +14,10 @@ public class AliyunRes implements ApiResponse {
 
     private String result;
 
+    public void setResult(String result) {
+        this.result = result;
+    }
+
     @Override
     public JSONObject toJson() {
         return JSON.parseObject(JSON.toJSONString(this));

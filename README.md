@@ -4,6 +4,7 @@
 
 ```bash
 npm install -g @alicloud/fun 
+fun config
 ```
 
 ## 本地运行
