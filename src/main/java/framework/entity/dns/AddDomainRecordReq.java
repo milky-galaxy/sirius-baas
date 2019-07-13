@@ -1,6 +1,6 @@
-package app.entity.dns;
+package framework.entity.dns;
 
-import app.entity.AliyunReq;
+import framework.entity.AliyunReq;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

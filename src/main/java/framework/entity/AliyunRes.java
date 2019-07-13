@@ -1,8 +1,8 @@
-package app.entity;
+package framework.entity;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import app.base.ApiResponse;
+import framework.base.ApiResponse;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

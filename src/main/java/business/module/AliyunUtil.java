@@ -1,10 +1,10 @@
-package app.util;
+package business.module;
 
 import com.aliyuncs.DefaultAcsClient;
 import com.aliyuncs.IAcsClient;
 import com.aliyuncs.profile.DefaultProfile;
 import com.aliyuncs.profile.IClientProfile;
-import app.entity.AliyunReq;
+import framework.entity.AliyunReq;
 
 public class AliyunUtil {
 

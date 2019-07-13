@@ -1,9 +1,9 @@
-package app.util;
+package framework.base;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import app.base.Err;
+import framework.base.Err;
 
 public class ErrUtil {
 

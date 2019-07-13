@@ -1,4 +1,4 @@
-package app.base;
+package framework.base;
 
 import com.alibaba.fastjson.JSONObject;
 

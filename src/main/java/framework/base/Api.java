@@ -1,4 +1,4 @@
-package app.base;
+package framework.base;
 
 public interface Api<Req extends ApiRequest, Res extends ApiResponse> {
 

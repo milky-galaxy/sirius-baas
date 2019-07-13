@@ -116,7 +116,7 @@
     </plugins>
     <resources>
       <resource>
-        <directory>${basedir}/src/main/java/app/config</directory>
+        <directory>src/main/java/business/config</directory>
         <targetPath>${basedir}/target/classes/app/config</targetPath>
       </resource>
     </resources>

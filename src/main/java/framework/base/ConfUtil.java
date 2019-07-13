@@ -1,20 +1,20 @@
-package app.util;
+package framework.base;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.JSONPath;
-import app.base.Err;
+import framework.base.Err;
 import org.yaml.snakeyaml.Yaml;
 
 import java.io.InputStream;
 import java.util.Map;
 
-import app.Main;
+import framework.Main;
 
 public final class ConfUtil {
 
-    private static final String CONF_FOLDER = "/app/config/";
+    private static final String CONF_FOLDER = "/business/config/";
     public static final String PARAM_ENV = "__env__";
 
     /**
@@ -54,11 +54,11 @@ public final class ConfUtil {
         try {
             // java JSONObject进行merge操作实现配置项目的合并处理算法实现
             if (CONFIG == null) {
-                InputStream stream = Main.class.getResourceAsStream(CONF_FOLDER + "config.base.yaml");
+                InputStream stream = Main.class.getResourceAsStream(CONF_FOLDER + "config.framework.yaml");
                 Yaml yaml2 = new Yaml();
                 Map<String, Object> tmp2 = yaml2.load(stream);
                 // 首次初始化全局配置数据信息
-                InputStream baseConfigPath = Main.class.getResourceAsStream(CONF_FOLDER + "config.base.yaml");
+                InputStream baseConfigPath = Main.class.getResourceAsStream(CONF_FOLDER + "config.framework.yaml");
                 InputStream targetConfigPath = Main.class.getResourceAsStream(CONF_FOLDER + "config." + ENV + ".yaml");
                 JSONObject base;
                 JSONObject target;

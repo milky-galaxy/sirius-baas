@@ -1,5 +1,5 @@
 {
-    "api": "/dns/AddDomain",
+    "business.api": "/dns/AddDomain",
     "param": {
         "accessKey": "1",
         "accessSecret": "2",

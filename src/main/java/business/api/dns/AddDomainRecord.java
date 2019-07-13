@@ -1,12 +1,12 @@
-package app.api.dns;
+package business.api.dns;
 
 import com.aliyuncs.IAcsClient;
 import com.aliyuncs.alidns.model.v20150109.AddDomainRecordRequest;
 import com.aliyuncs.http.HttpResponse;
-import app.base.Api;
-import app.entity.AliyunRes;
-import app.entity.dns.AddDomainRecordReq;
-import app.util.AliyunUtil;
+import framework.base.Api;
+import framework.entity.AliyunRes;
+import framework.entity.dns.AddDomainRecordReq;
+import business.module.AliyunUtil;
 
 public class AddDomainRecord implements Api<AddDomainRecordReq, AliyunRes> {
 
